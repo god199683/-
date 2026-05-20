@@ -1,0 +1,1136 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="사무직 지원자 김수연의 개인 PR 포트폴리오" />
+  <title>김수연 | 사무직 PR 포트폴리오</title>
+  <style>
+    :root {
+      --black: #101318;
+      --ink: #171b22;
+      --blue: #2563eb;
+      --blue-dark: #1e40af;
+      --blue-soft: #eff6ff;
+      --white: #ffffff;
+      --paper: #f6f8fb;
+      --line: #dbe2ea;
+      --muted: #64748b;
+      --good: #0f9f6e;
+      --warn: #d97706;
+      --bad: #dc2626;
+      --shadow: 0 18px 45px rgba(15, 23, 42, .08);
+    }
+
+    * { box-sizing: border-box; }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 74px;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Pretendard", "Noto Sans KR", "Malgun Gothic", Arial, sans-serif;
+      color: var(--ink);
+      background: var(--paper);
+      line-height: 1.65;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .site {
+      max-width: 1180px;
+      margin: 0 auto;
+      background: var(--white);
+      box-shadow: 0 24px 70px rgba(15, 23, 42, .14);
+    }
+
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 68px;
+      padding: 0 42px;
+      background: rgba(16, 19, 24, .96);
+      color: #cbd5e1;
+      backdrop-filter: blur(12px);
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 900;
+      color: var(--white);
+      letter-spacing: 0;
+      white-space: nowrap;
+    }
+
+    .brand-mark {
+      width: 28px;
+      height: 28px;
+      display: grid;
+      place-items: center;
+      border: 1px solid rgba(255, 255, 255, .2);
+      background: var(--blue);
+      font-size: 12px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+
+    .nav-links::-webkit-scrollbar { display: none; }
+
+    .nav-link {
+      padding: 22px 14px 18px;
+      border-bottom: 4px solid transparent;
+      font-size: 14px;
+      font-weight: 700;
+      white-space: nowrap;
+      transition: color .18s ease, border-color .18s ease;
+    }
+
+    .nav-link:hover,
+    .nav-link.active {
+      color: var(--white);
+      border-bottom-color: var(--blue);
+    }
+
+    section {
+      padding: 86px 76px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .cover {
+      min-height: 690px;
+      display: grid;
+      grid-template-columns: 1.15fr .85fr;
+      align-items: center;
+      gap: 56px;
+      background: var(--black);
+      color: var(--white);
+      overflow: hidden;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 24px;
+      color: #bfdbfe;
+      font-size: 14px;
+      font-weight: 800;
+      letter-spacing: 0;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 34px;
+      height: 2px;
+      background: var(--blue);
+    }
+
+    h1, h2, h3, p { margin: 0; }
+
+    h1 {
+      max-width: 680px;
+      font-size: clamp(42px, 6vw, 72px);
+      line-height: 1.14;
+      letter-spacing: 0;
+      font-weight: 900;
+    }
+
+    .cover-sub {
+      margin-top: 28px;
+      max-width: 620px;
+      color: #d7dee9;
+      font-size: 21px;
+      font-weight: 700;
+    }
+
+    .cover-points {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 34px;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      min-height: 34px;
+      padding: 7px 13px;
+      border: 1px solid rgba(255, 255, 255, .18);
+      background: rgba(255, 255, 255, .06);
+      color: #e2e8f0;
+      font-size: 14px;
+      font-weight: 800;
+    }
+
+    .profile-card {
+      position: relative;
+      padding: 34px;
+      background: var(--white);
+      color: var(--ink);
+      border-top: 8px solid var(--blue);
+      box-shadow: 0 28px 70px rgba(0, 0, 0, .35);
+    }
+
+    .profile-card::before {
+      content: "";
+      position: absolute;
+      top: 30px;
+      right: 30px;
+      width: 58px;
+      height: 8px;
+      background: var(--line);
+    }
+
+    .profile-initial {
+      width: 112px;
+      height: 112px;
+      display: grid;
+      place-items: center;
+      margin-bottom: 32px;
+      background: var(--blue-soft);
+      border: 1px solid #bfdbfe;
+      color: var(--blue);
+      font-size: 34px;
+      font-weight: 900;
+    }
+
+    .profile-card strong {
+      display: block;
+      font-size: 34px;
+      line-height: 1.2;
+      font-weight: 900;
+    }
+
+    .profile-card span {
+      display: block;
+      margin-top: 8px;
+      color: var(--muted);
+      font-weight: 700;
+    }
+
+    .profile-meta {
+      display: grid;
+      gap: 12px;
+      margin-top: 32px;
+      padding-top: 26px;
+      border-top: 1px solid var(--line);
+      font-size: 15px;
+    }
+
+    .profile-meta div {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .profile-meta dt {
+      color: var(--muted);
+      font-weight: 800;
+    }
+
+    .profile-meta dd {
+      margin: 0;
+      text-align: right;
+      font-weight: 900;
+    }
+
+    .section-title {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 28px;
+      margin-bottom: 46px;
+      padding-bottom: 22px;
+      border-bottom: 2px solid var(--line);
+    }
+
+    .section-title h2 {
+      color: var(--blue);
+      font-size: clamp(32px, 4vw, 48px);
+      line-height: 1.18;
+      letter-spacing: 0;
+      font-weight: 900;
+    }
+
+    .chapter {
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 900;
+      text-align: right;
+      white-space: nowrap;
+    }
+
+    .lead {
+      max-width: 780px;
+      color: #475569;
+      font-size: 18px;
+      font-weight: 700;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .card {
+      padding: 28px;
+      border: 1px solid var(--line);
+      background: var(--white);
+      box-shadow: 0 8px 24px rgba(15, 23, 42, .04);
+      transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      border-color: #b6c5d8;
+      box-shadow: var(--shadow);
+    }
+
+    .card h3 {
+      margin-bottom: 12px;
+      font-size: 22px;
+      line-height: 1.3;
+      font-weight: 900;
+    }
+
+    .card p,
+    .card li {
+      color: #536173;
+    }
+
+    .label {
+      display: inline-flex;
+      align-items: center;
+      min-height: 30px;
+      margin-bottom: 18px;
+      padding: 5px 11px;
+      background: var(--blue);
+      color: var(--white);
+      font-size: 13px;
+      font-weight: 900;
+    }
+
+    .timeline {
+      display: grid;
+      gap: 16px;
+    }
+
+    .timeline-item {
+      display: grid;
+      grid-template-columns: 116px 1fr;
+      gap: 18px;
+      padding: 22px;
+      border: 1px solid var(--line);
+      border-left: 6px solid var(--blue);
+      background: #fbfdff;
+    }
+
+    .period {
+      color: var(--blue-dark);
+      font-size: 13px;
+      font-weight: 900;
+    }
+
+    .timeline-item strong {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 18px;
+      line-height: 1.35;
+    }
+
+    .bullets {
+      margin: 0;
+      padding-left: 18px;
+    }
+
+    .bullets li + li { margin-top: 8px; }
+
+    .tool-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+
+    .tool-card {
+      min-height: 196px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 22px;
+      border: 1px solid var(--line);
+      background: #fbfdff;
+      transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+    }
+
+    .tool-card:hover {
+      transform: translateY(-4px);
+      border-color: #b6c5d8;
+      box-shadow: var(--shadow);
+    }
+
+    .tool-card h3 {
+      margin-bottom: 8px;
+      font-size: 19px;
+    }
+
+    .tool-card p {
+      color: #566579;
+      font-size: 14px;
+    }
+
+    .level {
+      margin-top: 18px;
+    }
+
+    .level-row {
+      display: flex;
+      gap: 5px;
+      margin-top: 7px;
+    }
+
+    .level small {
+      color: var(--muted);
+      font-weight: 900;
+    }
+
+    .bar {
+      width: 30px;
+      height: 8px;
+      background: #d9e2ee;
+    }
+
+    .bar.on { background: var(--blue); }
+
+    .portfolio-intro {
+      display: grid;
+      grid-template-columns: .95fr 1.05fr;
+      gap: 24px;
+      margin-bottom: 26px;
+    }
+
+    .metric-panel {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+    }
+
+    .metric {
+      padding: 18px;
+      border: 1px solid var(--line);
+      background: var(--black);
+      color: var(--white);
+    }
+
+    .metric span {
+      display: block;
+      color: #aebbd0;
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .metric strong {
+      display: block;
+      margin-top: 5px;
+      font-size: 28px;
+      line-height: 1.2;
+    }
+
+    .table-wrap {
+      overflow-x: auto;
+      border: 1px solid var(--line);
+      background: var(--white);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 760px;
+      font-size: 14px;
+    }
+
+    th, td {
+      padding: 14px 16px;
+      border-bottom: 1px solid var(--line);
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      background: #f1f5f9;
+      color: #334155;
+      font-size: 13px;
+      font-weight: 900;
+    }
+
+    td { color: #475569; }
+
+    tr:last-child td { border-bottom: 0; }
+
+    .status {
+      display: inline-flex;
+      min-width: 58px;
+      justify-content: center;
+      padding: 4px 8px;
+      font-size: 12px;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    .pass { background: #dcfce7; color: #166534; }
+    .fail { background: #fee2e2; color: #991b1b; }
+    .open { background: #dbeafe; color: #1d4ed8; }
+
+    .bug-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+      margin-top: 28px;
+    }
+
+    .bug-card {
+      padding: 24px;
+      border: 1px solid var(--line);
+      background: #fbfdff;
+      transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+    }
+
+    .bug-card:hover {
+      transform: translateY(-4px);
+      border-color: #b6c5d8;
+      box-shadow: var(--shadow);
+    }
+
+    .bug-head {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+
+    .bug-key {
+      color: var(--blue);
+      font-size: 13px;
+      font-weight: 900;
+    }
+
+    .bug-card h3 {
+      font-size: 20px;
+      line-height: 1.35;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 12px 0 18px;
+    }
+
+    .tag {
+      padding: 4px 9px;
+      background: var(--blue-soft);
+      color: var(--blue-dark);
+      font-size: 12px;
+      font-weight: 900;
+    }
+
+    .bug-list {
+      display: grid;
+      gap: 10px;
+      margin: 0;
+    }
+
+    .bug-list div {
+      display: grid;
+      grid-template-columns: 82px 1fr;
+      gap: 12px;
+      padding-top: 10px;
+      border-top: 1px solid #e8eef5;
+    }
+
+    .bug-list dt {
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 900;
+    }
+
+    .bug-list dd {
+      margin: 0;
+      color: #475569;
+      font-size: 14px;
+    }
+
+    .dashboard {
+      display: grid;
+      grid-template-columns: .78fr 1.22fr;
+      gap: 22px;
+      margin-top: 28px;
+    }
+
+    .donut-card,
+    .module-card {
+      padding: 26px;
+      border: 1px solid var(--line);
+      background: var(--white);
+    }
+
+    .donut {
+      width: 210px;
+      height: 210px;
+      display: grid;
+      place-items: center;
+      margin: 18px auto 10px;
+      border-radius: 50%;
+      background: conic-gradient(var(--good) 0 95.7%, var(--bad) 95.7% 100%);
+      position: relative;
+    }
+
+    .donut::after {
+      content: "";
+      position: absolute;
+      inset: 26px;
+      border-radius: 50%;
+      background: var(--white);
+    }
+
+    .donut strong {
+      position: relative;
+      z-index: 1;
+      font-size: 34px;
+      color: var(--ink);
+    }
+
+    .module-row {
+      display: grid;
+      grid-template-columns: 92px 1fr 48px;
+      align-items: center;
+      gap: 12px;
+      margin-top: 15px;
+      color: #475569;
+      font-size: 14px;
+      font-weight: 800;
+    }
+
+    .track {
+      height: 10px;
+      background: #e2e8f0;
+      overflow: hidden;
+    }
+
+    .track i {
+      display: block;
+      height: 100%;
+      background: var(--blue);
+    }
+
+    .strength-grid {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 12px;
+    }
+
+    .strength {
+      min-height: 128px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 18px;
+      border: 1px solid var(--line);
+      background: #fbfdff;
+    }
+
+    .strength strong {
+      font-size: 18px;
+      line-height: 1.25;
+    }
+
+    .strength span {
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .goal {
+      background: var(--black);
+      color: var(--white);
+    }
+
+    .goal .section-title {
+      border-color: rgba(255, 255, 255, .18);
+    }
+
+    .goal .section-title h2 { color: var(--white); }
+    .goal .chapter { color: #aebbd0; }
+
+    .goal-message {
+      display: grid;
+      grid-template-columns: 1.08fr .92fr;
+      gap: 40px;
+      align-items: start;
+    }
+
+    .goal h3 {
+      max-width: 710px;
+      font-size: clamp(31px, 4vw, 52px);
+      line-height: 1.25;
+      letter-spacing: 0;
+      font-weight: 900;
+    }
+
+    .goal p {
+      margin-top: 24px;
+      color: #d8e0ea;
+      font-size: 18px;
+      font-weight: 700;
+    }
+
+    .goal-box {
+      padding: 28px;
+      border: 1px solid rgba(255, 255, 255, .16);
+      background: rgba(255, 255, 255, .06);
+    }
+
+    .goal-box ul {
+      margin: 0;
+      padding-left: 18px;
+      color: #e2e8f0;
+    }
+
+    .goal-box li + li { margin-top: 12px; }
+
+    .footer {
+      padding: 28px 76px;
+      background: #07090d;
+      color: #94a3b8;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(16px);
+      transition: opacity .55s ease, transform .55s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .reveal,
+      .card,
+      .tool-card,
+      .bug-card {
+        transition: none;
+      }
+    }
+
+    @media (max-width: 1020px) {
+      section { padding: 72px 44px; }
+      .cover,
+      .portfolio-intro,
+      .dashboard,
+      .goal-message {
+        grid-template-columns: 1fr;
+      }
+      .tool-grid { grid-template-columns: repeat(3, 1fr); }
+      .strength-grid { grid-template-columns: repeat(3, 1fr); }
+      .profile-card { max-width: 460px; }
+    }
+
+    @media (max-width: 760px) {
+      .site {
+        max-width: none;
+        box-shadow: none;
+      }
+      .nav {
+        align-items: stretch;
+        flex-direction: column;
+        gap: 0;
+        padding: 10px 18px 0;
+      }
+      .brand { min-height: 36px; }
+      .nav-links { width: 100%; }
+      .nav-link { padding: 12px 10px 10px; font-size: 13px; }
+      section { padding: 56px 22px; }
+      .cover { min-height: auto; padding-top: 64px; }
+      .cover-sub { font-size: 18px; }
+      .section-title {
+        display: block;
+        margin-bottom: 32px;
+      }
+      .chapter {
+        display: block;
+        margin-top: 10px;
+        text-align: left;
+      }
+      .grid-2,
+      .grid-3,
+      .bug-grid {
+        grid-template-columns: 1fr;
+      }
+      .timeline-item {
+        grid-template-columns: 1fr;
+        gap: 8px;
+      }
+      .tool-grid,
+      .metric-panel,
+      .strength-grid {
+        grid-template-columns: 1fr;
+      }
+      .bug-head { display: block; }
+      .bug-list div {
+        grid-template-columns: 1fr;
+        gap: 4px;
+      }
+      .footer { padding: 24px 22px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="site">
+    <nav class="nav" aria-label="주요 섹션">
+      <a class="brand" href="#cover" aria-label="김수연 포트폴리오 홈">
+        <span class="brand-mark">KSY</span>
+        <span>김수연 PR Portfolio</span>
+      </a>
+      <div class="nav-links">
+        <a class="nav-link active" href="#cover">Cover</a>
+        <a class="nav-link" href="#about">About</a>
+        <a class="nav-link" href="#skills">Skills</a>
+        <a class="nav-link" href="#portfolio">Portfolio</a>
+        <a class="nav-link" href="#strength">Strength</a>
+        <a class="nav-link" href="#goal">Goal</a>
+      </div>
+    </nav>
+
+    <section class="cover" id="cover">
+      <div class="reveal">
+        <span class="eyebrow">Office Assistant · QA Documentation</span>
+        <h1>김수연<br>꼼꼼함으로 문제를 정리하는 사무직 지원자</h1>
+        <p class="cover-sub">문서화 · 검증 · 협업 중심의 실무형 인재</p>
+        <div class="cover-points" aria-label="핵심 키워드">
+          <span class="pill">행정 사무 경험</span>
+          <span class="pill">민원 응대</span>
+          <span class="pill">자료 입력</span>
+          <span class="pill">테스트 케이스 정리</span>
+          <span class="pill">Jira 버그 리포트</span>
+        </div>
+      </div>
+      <aside class="profile-card reveal">
+        <div class="profile-initial">PR</div>
+        <strong>김수연</strong>
+        <span>사무직 지원자 / 업무 정리형 인재</span>
+        <dl class="profile-meta">
+          <div><dt>방향성</dt><dd>행정 · 사무</dd></div>
+          <div><dt>강점</dt><dd>정확한 기록</dd></div>
+          <div><dt>문서</dt><dd>TC · 이슈 · 대시보드</dd></div>
+        </dl>
+      </aside>
+    </section>
+
+    <section id="about">
+      <div class="section-title reveal">
+        <h2>현장에서 쌓은 행정 경험을<br>업무 정리 역량으로 연결합니다</h2>
+        <span class="chapter">01. ABOUT ME</span>
+      </div>
+      <p class="lead reveal">광명시청과 도서관, 국제 행사 현장에서 민원 응대, 자료 입력, 서류 정리, 프로그램 운영 보조를 경험했습니다. 최근에는 AI 활용 SW 테스팅 실무과정을 통해 테스트 케이스와 이슈 리포트를 작성하며, 사무 업무에 필요한 정리력과 검증 관점을 함께 키우고 있습니다.</p>
+
+      <div class="grid-2" style="margin-top: 34px;">
+        <div class="card reveal">
+          <span class="label">경험 요약</span>
+          <div class="timeline">
+            <article class="timeline-item">
+              <span class="period">2024.02 - 2024.06</span>
+              <div>
+                <strong>광명시청 차량등록사업소 사무보조</strong>
+                <p>차량등록 민원에 필요한 정보를 프로그램에 입력하고 검토했습니다.</p>
+              </div>
+            </article>
+            <article class="timeline-item">
+              <span class="period">2023.07 - 2023.12</span>
+              <div>
+                <strong>광명시청 복지정책과 사례지원팀 사무보조</strong>
+                <p>서류 정리, 환경 정비, 홍보 물품 포장 등 꼼꼼함이 필요한 지원 업무를 수행했습니다.</p>
+              </div>
+            </article>
+            <article class="timeline-item">
+              <span class="period">2022.02 - 2022.12</span>
+              <div>
+                <strong>새싹작은도서관 행정 업무</strong>
+                <p>서가 정리, 상호대차, 대출·반납, 프로그램 운영 보조, 독서 모임 진행을 맡았습니다.</p>
+              </div>
+            </article>
+            <article class="timeline-item">
+              <span class="period">2018.01 - 2018.02</span>
+              <div>
+                <strong>평창 동계올림픽 안내/보안 업무</strong>
+                <p>관람객 안내와 반입 물품 확인을 담당하며 민원 상황에 차분하게 대응했습니다.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="card reveal">
+          <span class="label">업무 역량</span>
+          <h3>반복 업무를 기준과 기록으로 정리합니다</h3>
+          <ul class="bullets">
+            <li>민원 응대 과정에서 필요한 내용을 정확히 확인하고 안내했습니다.</li>
+            <li>자료 입력과 서류 정리 업무에서 누락 없이 확인하는 습관을 쌓았습니다.</li>
+            <li>프로그램 운영 보조 경험을 통해 사전 준비, 현장 진행, 마무리 기록의 흐름을 익혔습니다.</li>
+            <li>테스트 케이스와 Jira 이슈 문서를 작성하며 문제를 재현 가능한 절차로 정리했습니다.</li>
+            <li>문서화 경험을 사무 업무의 인수인계, 오류 예방, 협업 효율 향상과 연결해 활용합니다.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <div class="section-title reveal">
+        <h2>사무 업무에 연결되는<br>도구 활용 역량</h2>
+        <span class="chapter">02. SKILLS</span>
+      </div>
+      <div class="tool-grid">
+        <article class="tool-card reveal"><div><h3>Excel</h3><p>테스트 케이스 표, 결과 현황, 데이터 정리 및 필터링</p></div><div class="level"><small>숙련도: 상</small><div class="level-row"><i class="bar on"></i><i class="bar on"></i><i class="bar on"></i></div></div></article>
+        <article class="tool-card reveal"><div><h3>Jira</h3><p>이슈 등록, 우선순위 구분, 재현 절차와 결과 정리</p></div><div class="level"><small>숙련도: 중</small><div class="level-row"><i class="bar on"></i><i class="bar on"></i><i class="bar"></i></div></div></article>
+        <article class="tool-card reveal"><div><h3>Postman</h3><p>API 요청 확인, 응답값 검증, 테스트 보조 자료 작성</p></div><div class="level"><small>숙련도: 중</small><div class="level-row"><i class="bar on"></i><i class="bar on"></i><i class="bar"></i></div></div></article>
+        <article class="tool-card reveal"><div><h3>Git/GitHub</h3><p>작업 이력 확인, GitHub Pages 배포 흐름 이해</p></div><div class="level"><small>숙련도: 중</small><div class="level-row"><i class="bar on"></i><i class="bar on"></i><i class="bar"></i></div></div></article>
+        <article class="tool-card reveal"><div><h3>Jenkins</h3><p>빌드와 배포 흐름을 확인하고 결과 상태를 파악</p></div><div class="level"><small>숙련도: 기초</small><div class="level-row"><i class="bar on"></i><i class="bar"></i><i class="bar"></i></div></div></article>
+        <article class="tool-card reveal"><div><h3>Playwright</h3><p>웹 화면 검증과 자동화 테스트 흐름 이해</p></div><div class="level"><small>숙련도: 기초</small><div class="level-row"><i class="bar on"></i><i class="bar"></i><i class="bar"></i></div></div></article>
+        <article class="tool-card reveal"><div><h3>SQL</h3><p>조건 기반 조회, 데이터 확인, 결과 비교 관점 학습</p></div><div class="level"><small>숙련도: 기초</small><div class="level-row"><i class="bar on"></i><i class="bar"></i><i class="bar"></i></div></div></article>
+        <article class="tool-card reveal"><div><h3>ADB</h3><p>모바일 기기 상태 확인 및 테스트 환경 점검 보조</p></div><div class="level"><small>숙련도: 기초</small><div class="level-row"><i class="bar on"></i><i class="bar"></i><i class="bar"></i></div></div></article>
+        <article class="tool-card reveal"><div><h3>ChatGPT</h3><p>문서 초안 정리, 체크리스트 구성, 표현 다듬기</p></div><div class="level"><small>숙련도: 중</small><div class="level-row"><i class="bar on"></i><i class="bar on"></i><i class="bar"></i></div></div></article>
+        <article class="tool-card reveal"><div><h3>Gemini</h3><p>자료 요약, 아이디어 정리, 문서 검토 보조</p></div><div class="level"><small>숙련도: 중</small><div class="level-row"><i class="bar on"></i><i class="bar on"></i><i class="bar"></i></div></div></article>
+        <article class="tool-card reveal"><div><h3>Word</h3><p>보고 문서 작성, 서식 정리, 안내문 구성</p></div><div class="level"><small>숙련도: 상</small><div class="level-row"><i class="bar on"></i><i class="bar on"></i><i class="bar on"></i></div></div></article>
+        <article class="tool-card reveal"><div><h3>PowerPoint</h3><p>보고 자료 구성, 발표 문서 정리, 시각 요약</p></div><div class="level"><small>숙련도: 상</small><div class="level-row"><i class="bar on"></i><i class="bar on"></i><i class="bar on"></i></div></div></article>
+      </div>
+    </section>
+
+    <section id="portfolio">
+      <div class="section-title reveal">
+        <h2>QA 문서화 경험을<br>업무 정리 능력으로 보여줍니다</h2>
+        <span class="chapter">03. PORTFOLIO</span>
+      </div>
+
+      <div class="portfolio-intro">
+        <div class="card reveal">
+          <span class="label">문서화 방향</span>
+          <h3>문제를 발견하는 것에서 끝내지 않고, 다음 사람이 이해할 수 있게 정리합니다</h3>
+          <p>블로그 시나리오 검증 자료를 바탕으로 테스트 케이스, Jira 스타일 버그 리포트, 결과 대시보드를 구성했습니다. 사무 업무에서도 같은 방식으로 반복 업무의 기준, 진행 현황, 개선 필요 항목을 명확히 기록할 수 있습니다.</p>
+        </div>
+        <div class="metric-panel reveal" aria-label="검증 요약 지표">
+          <div class="metric"><span>전체 시나리오</span><strong>93</strong></div>
+          <div class="metric"><span>Pass</span><strong>89</strong></div>
+          <div class="metric"><span>Fail</span><strong>4</strong></div>
+          <div class="metric"><span>통과율</span><strong>95.7%</strong></div>
+        </div>
+      </div>
+
+      <div class="card reveal" style="padding: 0;">
+        <div style="padding: 24px 24px 18px;">
+          <span class="label">테스트 케이스 표</span>
+          <h3>기능별 확인 항목을 표준 양식으로 정리</h3>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>TC ID</th>
+                <th>분류</th>
+                <th>테스트 항목</th>
+                <th>확인 목적</th>
+                <th>우선순위</th>
+                <th>결과</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>LGN-001</td>
+                <td>인증 / 로그인</td>
+                <td>정상 로그인</td>
+                <td>올바른 인증 정보로 로그인 성공 여부 확인</td>
+                <td>P1</td>
+                <td><span class="status pass">Pass</span></td>
+              </tr>
+              <tr>
+                <td>LGN-009</td>
+                <td>인증 / 계정 관리</td>
+                <td>회원 탈퇴 버튼 확인</td>
+                <td>계정 관리 페이지 하단의 회원탈퇴 버튼 존재 여부 확인</td>
+                <td>P1</td>
+                <td><span class="status fail">Fail</span></td>
+              </tr>
+              <tr>
+                <td>MBL-006</td>
+                <td>콘텐츠 / 전체 보기</td>
+                <td>목록 열기 전 아이콘 표시</td>
+                <td>목록 열기 전후 아이콘 표시 상태 확인</td>
+                <td>P2</td>
+                <td><span class="status fail">Fail</span></td>
+              </tr>
+              <tr>
+                <td>MTR-004</td>
+                <td>데이터관리 / 자료실 휴지통</td>
+                <td>자료 영구 삭제</td>
+                <td>휴지통 자료가 완전히 제거되는지 확인</td>
+                <td>P1</td>
+                <td><span class="status pass">Pass</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="bug-grid">
+        <article class="bug-card reveal">
+          <div class="bug-head">
+            <div>
+              <span class="bug-key">KAN-16 · VWR-004</span>
+              <h3>책 읽기 모드에서 이미지가 표시되지 않음</h3>
+            </div>
+            <span class="status open">완료</span>
+          </div>
+          <div class="tags"><span class="tag">Priority Highest</span><span class="tag">뷰어</span><span class="tag">Manual</span></div>
+          <dl class="bug-list">
+            <div><dt>재현</dt><dd>로그인 후 블로그 목록에서 게시글을 선택하고 책 읽기 모드로 진입</dd></div>
+            <div><dt>기대</dt><dd>본문 이미지 또는 내용이 정상적으로 표시</dd></div>
+            <div><dt>실제</dt><dd>책 읽기 모드에서 이미지 또는 본문 내용이 표시되지 않음</dd></div>
+          </dl>
+        </article>
+
+        <article class="bug-card reveal">
+          <div class="bug-head">
+            <div>
+              <span class="bug-key">KAN-15 · MBL-006</span>
+              <h3>전체 보기 영역 목록 열기 전 아이콘 표시</h3>
+            </div>
+            <span class="status open">완료</span>
+          </div>
+          <div class="tags"><span class="tag">Priority Low</span><span class="tag">UI</span><span class="tag">Manual</span></div>
+          <dl class="bug-list">
+            <div><dt>재현</dt><dd>내 블로그 본문 상단 전체목록 영역에서 목록 열기 전 상태 확인</dd></div>
+            <div><dt>기대</dt><dd>목록 열기 전에는 아이콘이 보이지 않고, 클릭 후 3개 아이콘 표시</dd></div>
+            <div><dt>실제</dt><dd>목록 열기 클릭 전부터 3개 아이콘이 표시됨</dd></div>
+          </dl>
+        </article>
+      </div>
+
+      <div class="dashboard reveal">
+        <div class="donut-card">
+          <span class="label">QA 결과 대시보드</span>
+          <h3>시나리오 통과율</h3>
+          <div class="donut" aria-label="시나리오 통과율 95.7%"><strong>95.7%</strong></div>
+          <p style="color: #64748b; text-align: center;">PASS 89건 · FAIL 4건 · BLOCKED 0건</p>
+        </div>
+        <div class="module-card">
+          <span class="label">모듈별 결과 요약</span>
+          <h3>검증 현황을 한눈에 파악하는 구조</h3>
+          <div class="module-row"><span>인증</span><div class="track"><i style="width: 91%;"></i></div><span>20/22</span></div>
+          <div class="module-row"><span>콘텐츠</span><div class="track"><i style="width: 95%;"></i></div><span>38/40</span></div>
+          <div class="module-row"><span>계정</span><div class="track"><i style="width: 100%;"></i></div><span>11/11</span></div>
+          <div class="module-row"><span>자료실</span><div class="track"><i style="width: 100%;"></i></div><span>6/6</span></div>
+          <div class="module-row"><span>데이터관리</span><div class="track"><i style="width: 100%;"></i></div><span>14/14</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="strength">
+      <div class="section-title reveal">
+        <h2>사무직에 필요한 태도와<br>문서 중심 업무 습관</h2>
+        <span class="chapter">04. STRENGTH</span>
+      </div>
+      <div class="strength-grid">
+        <div class="strength reveal"><strong>꼼꼼함</strong><span>입력값과 결과를 한 번 더 확인</span></div>
+        <div class="strength reveal"><strong>문서화</strong><span>업무 흐름을 기준과 양식으로 정리</span></div>
+        <div class="strength reveal"><strong>정확성</strong><span>민원 정보와 서류 내용을 정확히 처리</span></div>
+        <div class="strength reveal"><strong>협업</strong><span>상대가 이해하기 쉬운 표현으로 공유</span></div>
+        <div class="strength reveal"><strong>민원 응대</strong><span>문의와 요청을 차분하게 확인</span></div>
+        <div class="strength reveal"><strong>기록 중심</strong><span>진행 내용과 결과를 남기는 습관</span></div>
+        <div class="strength reveal"><strong>개선 제안</strong><span>오류를 발견하면 재발 방지 관점으로 정리</span></div>
+      </div>
+    </section>
+
+    <section id="goal" class="goal">
+      <div class="section-title reveal">
+        <h2>앞으로의 목표</h2>
+        <span class="chapter">05. GOAL</span>
+      </div>
+      <div class="goal-message">
+        <div class="reveal">
+          <h3>반복되는 업무를 구조화하고, 누구나 이해할 수 있는 문서로 정리하는 실무형 사무 인재가 되겠습니다.</h3>
+          <p>행정 현장에서 쌓은 민원 응대와 자료 정리 경험에 QA 문서화 방식을 더해, 업무 누락을 줄이고 협업자가 바로 이해할 수 있는 기록을 만드는 사람이 되고자 합니다.</p>
+        </div>
+        <div class="goal-box reveal">
+          <span class="label">실무 기여 방향</span>
+          <ul>
+            <li>반복 업무를 체크리스트와 표준 양식으로 정리</li>
+            <li>자료 입력과 서류 처리 과정의 오류 예방</li>
+            <li>현황을 한눈에 볼 수 있는 보고 자료 구성</li>
+            <li>문제 상황을 재현 절차, 원인, 개선 제안으로 기록</li>
+            <li>동료와 담당자가 빠르게 이해할 수 있는 협업 문서 작성</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      김수연 개인 PR 포트폴리오 · Office Assistant Portfolio · GitHub Pages Ready
+    </footer>
+  </main>
+
+  <script>
+    const navLinks = Array.from(document.querySelectorAll(".nav-link"));
+    const sections = navLinks
+      .map((link) => document.querySelector(link.getAttribute("href")))
+      .filter(Boolean);
+
+    const setActiveNav = () => {
+      let current = sections[0]?.id;
+      sections.forEach((section) => {
+        const rect = section.getBoundingClientRect();
+        if (rect.top <= 120 && rect.bottom >= 120) current = section.id;
+      });
+      navLinks.forEach((link) => {
+        link.classList.toggle("active", link.getAttribute("href") === `#${current}`);
+      });
+    };
+
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.14 });
+
+    document.querySelectorAll(".reveal").forEach((item) => revealObserver.observe(item));
+    window.addEventListener("scroll", setActiveNav, { passive: true });
+    window.addEventListener("resize", setActiveNav);
+    setActiveNav();
+  </script>
+</body>
+</html>
