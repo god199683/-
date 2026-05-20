@@ -424,22 +424,25 @@
 
     .portfolio-intro {
       display: grid;
-      grid-template-columns: .95fr 1.05fr;
-      gap: 24px;
-      margin-bottom: 26px;
+      grid-template-columns: minmax(0, 1.35fr) minmax(360px, .65fr);
+      align-items: start;
+      gap: 20px;
+      margin-bottom: 28px;
     }
 
     .metric-panel {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 12px;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
     }
 
     .metric {
-      padding: 18px;
+      min-height: 104px;
+      padding: 18px 20px;
       border: 1px solid var(--line);
-      background: #f0f9ff;
+      background: var(--white);
       color: var(--ink);
+      border-left: 4px solid var(--blue);
     }
 
     .metric span {
@@ -451,28 +454,31 @@
 
     .metric strong {
       display: block;
-      margin-top: 5px;
-      font-size: 28px;
+      margin-top: 4px;
+      font-size: 32px;
       line-height: 1.2;
     }
 
     .doc-actions {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 14px;
-      margin-top: 18px;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 10px;
+      margin-top: 22px;
     }
 
     .doc-link {
       display: flex;
-      align-items: center;
-      justify-content: space-between;
+      align-items: flex-start;
+      justify-content: center;
+      flex-direction: column;
       gap: 12px;
-      padding: 16px 18px;
+      min-height: 74px;
+      padding: 14px 16px;
       border: 1px solid var(--line);
       background: var(--white);
       color: var(--blue-dark);
       font-weight: 900;
+      line-height: 1.35;
       transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
     }
 
