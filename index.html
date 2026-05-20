@@ -1139,6 +1139,10 @@
   </main>
 
   <script>
+    if ("scrollRestoration" in history) {
+      history.scrollRestoration = "manual";
+    }
+
     const navLinks = Array.from(document.querySelectorAll(".nav-link"));
     const sections = navLinks
       .map((link) => document.querySelector(link.getAttribute("href")))
@@ -1165,6 +1169,25 @@
     }, { threshold: 0.14 });
 
     document.querySelectorAll(".reveal").forEach((item) => revealObserver.observe(item));
+    navLinks.forEach((link) => {
+      link.addEventListener("click", () => {
+        sessionStorage.setItem("portfolio-nav-clicked", "true");
+      });
+    });
+
+    window.addEventListener("pageshow", () => {
+      const navigatedInsidePage = sessionStorage.getItem("portfolio-nav-clicked") === "true";
+      sessionStorage.removeItem("portfolio-nav-clicked");
+
+      if (!navigatedInsidePage) {
+        if (window.location.hash) {
+          history.replaceState(null, "", window.location.pathname + window.location.search);
+        }
+        window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+      }
+
+      setActiveNav();
+    });
     window.addEventListener("scroll", setActiveNav, { passive: true });
     window.addEventListener("resize", setActiveNav);
     setActiveNav();
