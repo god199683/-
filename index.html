@@ -275,42 +275,76 @@
     }
 
     .id-card-footer {
-      display: grid;
-      grid-template-columns: 1fr auto;
-      align-items: end;
-      gap: 18px;
+      display: flex;
+      justify-content: center;
       margin-top: 30px;
       padding-top: 18px;
       border-top: 1px solid var(--line);
     }
 
-    .barcode {
-      display: flex;
-      align-items: end;
-      gap: 3px;
-      height: 34px;
+    .lanyard-icon {
+      position: relative;
+      width: 68px;
+      height: 92px;
     }
 
-    .barcode i {
-      display: block;
-      width: 4px;
-      background: var(--blue-dark);
-      opacity: .8;
+    .lanyard-icon::before,
+    .lanyard-icon::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      width: 5px;
+      height: 46px;
+      background: #9fd7ef;
+      transform-origin: top center;
     }
 
-    .barcode i:nth-child(2n) { height: 22px; }
-    .barcode i:nth-child(2n + 1) { height: 32px; }
-    .barcode i:nth-child(3n) { height: 16px; }
+    .lanyard-icon::before {
+      left: 20px;
+      transform: rotate(-28deg);
+    }
 
-    .id-chip {
-      min-width: 68px;
-      padding: 8px 10px;
-      background: var(--blue-soft);
-      border: 1px solid var(--line);
-      color: var(--blue-dark);
-      font-size: 12px;
-      font-weight: 900;
-      text-align: center;
+    .lanyard-icon::after {
+      right: 20px;
+      transform: rotate(28deg);
+    }
+
+    .lanyard-card {
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      width: 42px;
+      height: 62px;
+      transform: translateX(-50%);
+      border: 3px solid #dedede;
+      border-radius: 3px;
+      background: var(--white);
+    }
+
+    .lanyard-card::before {
+      content: "";
+      position: absolute;
+      top: -9px;
+      left: 50%;
+      width: 22px;
+      height: 10px;
+      transform: translateX(-50%);
+      border: 3px solid #dedede;
+      border-bottom: 0;
+      border-radius: 4px 4px 0 0;
+      background: var(--white);
+    }
+
+    .lanyard-card::after {
+      content: "";
+      position: absolute;
+      top: 16px;
+      left: 50%;
+      width: 19px;
+      height: 19px;
+      transform: translateX(-50%);
+      border-radius: 50%;
+      background: #9fd7ef;
     }
 
     .section-title {
@@ -959,10 +993,9 @@
           <div><dt>문서</dt><dd>TC · 이슈 · 대시보드</dd></div>
         </dl>
         <div class="id-card-footer" aria-hidden="true">
-          <div class="barcode">
-            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+          <div class="lanyard-icon">
+            <div class="lanyard-card"></div>
           </div>
-          <div class="id-chip">OFFICE</div>
         </div>
       </aside>
     </section>
