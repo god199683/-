@@ -191,23 +191,52 @@
 
     .profile-card {
       position: relative;
+      margin-top: 54px;
       padding: 30px 34px 28px;
       background: var(--white);
       color: var(--ink);
       border: 1px solid var(--line);
       border-top: 8px solid var(--blue);
       box-shadow: 0 22px 55px rgba(56, 165, 230, .18);
-      overflow: hidden;
+      overflow: visible;
     }
 
     .profile-card::before {
       content: "";
       position: absolute;
-      top: 22px;
-      right: 28px;
-      width: 76px;
-      height: 10px;
-      background: linear-gradient(90deg, var(--line), #eef8fd);
+      top: -64px;
+      left: calc(50% - 28px);
+      width: 7px;
+      height: 72px;
+      background: #9fd7ef;
+      transform: rotate(-26deg);
+      transform-origin: bottom center;
+    }
+
+    .profile-card::after {
+      content: "";
+      position: absolute;
+      top: -64px;
+      right: calc(50% - 28px);
+      width: 7px;
+      height: 72px;
+      background: #9fd7ef;
+      transform: rotate(26deg);
+      transform-origin: bottom center;
+    }
+
+    .id-card-clip {
+      position: absolute;
+      top: -10px;
+      left: 50%;
+      width: 50px;
+      height: 18px;
+      transform: translateX(-50%);
+      border: 3px solid #dedede;
+      border-bottom: 0;
+      border-radius: 7px 7px 0 0;
+      background: var(--white);
+      z-index: 2;
     }
 
     .id-card-header {
@@ -274,78 +303,6 @@
       font-weight: 900;
     }
 
-    .id-card-footer {
-      display: flex;
-      justify-content: center;
-      margin-top: 30px;
-      padding-top: 18px;
-      border-top: 1px solid var(--line);
-    }
-
-    .lanyard-icon {
-      position: relative;
-      width: 68px;
-      height: 92px;
-    }
-
-    .lanyard-icon::before,
-    .lanyard-icon::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      width: 5px;
-      height: 46px;
-      background: #9fd7ef;
-      transform-origin: top center;
-    }
-
-    .lanyard-icon::before {
-      left: 20px;
-      transform: rotate(-28deg);
-    }
-
-    .lanyard-icon::after {
-      right: 20px;
-      transform: rotate(28deg);
-    }
-
-    .lanyard-card {
-      position: absolute;
-      left: 50%;
-      bottom: 0;
-      width: 42px;
-      height: 62px;
-      transform: translateX(-50%);
-      border: 3px solid #dedede;
-      border-radius: 3px;
-      background: var(--white);
-    }
-
-    .lanyard-card::before {
-      content: "";
-      position: absolute;
-      top: -9px;
-      left: 50%;
-      width: 22px;
-      height: 10px;
-      transform: translateX(-50%);
-      border: 3px solid #dedede;
-      border-bottom: 0;
-      border-radius: 4px 4px 0 0;
-      background: var(--white);
-    }
-
-    .lanyard-card::after {
-      content: "";
-      position: absolute;
-      top: 16px;
-      left: 50%;
-      width: 19px;
-      height: 19px;
-      transform: translateX(-50%);
-      border-radius: 50%;
-      background: #9fd7ef;
-    }
 
     .section-title {
       display: flex;
@@ -981,6 +938,7 @@
         </div>
       </div>
       <aside class="profile-card reveal">
+        <div class="id-card-clip" aria-hidden="true"></div>
         <div class="id-card-header">
           <span>OFFICE ID CARD</span>
           <small>KSY-2026</small>
@@ -992,11 +950,6 @@
           <div><dt>강점</dt><dd>정확한 기록</dd></div>
           <div><dt>문서</dt><dd>TC · 이슈 · 대시보드</dd></div>
         </dl>
-        <div class="id-card-footer" aria-hidden="true">
-          <div class="lanyard-icon">
-            <div class="lanyard-card"></div>
-          </div>
-        </div>
       </aside>
     </section>
 
