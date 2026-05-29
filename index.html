@@ -210,6 +210,28 @@
       box-shadow: var(--shadow);
     }
 
+    .profile-head {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .profile-photo {
+      width: 112px;
+      aspect-ratio: 3 / 4;
+      flex: 0 0 auto;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #f8fbfd;
+      object-fit: cover;
+      object-position: center top;
+      box-shadow: 0 10px 24px rgba(15, 23, 42, .08);
+    }
+
+    .profile-name {
+      min-width: 0;
+    }
+
     .profile-card strong {
       display: block;
       font-size: 30px;
@@ -902,6 +924,11 @@
       section { min-height: auto; }
       .cover { min-height: calc(100vh - 82px); padding-top: 64px; }
       .cover-sub { font-size: 18px; }
+      .profile-head {
+        align-items: flex-start;
+        gap: 16px;
+      }
+      .profile-photo { width: 96px; }
       .section-title {
         display: block;
         margin-bottom: 32px;
@@ -968,8 +995,13 @@
         </div>
       </div>
       <aside class="profile-card reveal">
-        <strong>김수연</strong>
-        <span class="profile-role">사무직 지원자 / 업무 정리형 인재</span>
+        <div class="profile-head">
+          <img class="profile-photo" src="assets/profile-photo.jpg" alt="김수연 사진" />
+          <div class="profile-name">
+            <strong>김수연</strong>
+            <span class="profile-role">사무직 지원자 / 업무 정리형 인재</span>
+          </div>
+        </div>
         <dl class="profile-meta">
           <div><dt>방향성</dt><dd>행정 · 사무</dd></div>
           <div><dt>강점</dt><dd>정확한 기록</dd></div>
